@@ -22,7 +22,7 @@ const BadgeList = ({ heading, list }: Props) => {
             colorScheme={colorMode === "light" ? "facebook" : "gray"}
             fontSize={{ base: "xs", sm: "sm" }}
             fontFamily={"sans-serif"}
-            fontWeight={{ base: "medium", md: "thin" }}
+            fontWeight={{ base: "thin" }}
           >
             {item}
           </Badge>
