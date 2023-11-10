@@ -11,7 +11,7 @@ const socialLinks = {
     "https://twitter.com/AdeelHarry",
     "https://www.instagram.com/adeelharry/",
   ],
-  icons: [FaInstagram, FaTwitter, FaLinkedinIn, FaGithub],
+  icons: [FaLinkedinIn, FaGithub, FaTwitter, FaInstagram],
 };
 
 const SocialLinks = () => {
