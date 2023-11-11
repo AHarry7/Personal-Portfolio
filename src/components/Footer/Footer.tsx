@@ -30,7 +30,7 @@ export default function LargeWithLogoCentered() {
         </Flex>
       </Container>
       <FooterCredits imgSrcD={logob} imgSrcL={logow}>
-        © 2022 Chakra Templates. All rights reserved
+        © 2023 All rights reserved.
       </FooterCredits>
     </Box>
   );
