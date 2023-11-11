@@ -9,9 +9,6 @@ It is still under progress and i will be adding more.
 - [Technologies Used](#technologies-used)
 - [Features](#features)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## About
 
@@ -51,7 +48,7 @@ Here are some screenshots from my portfolio website:
 
 ## Installation
 
-If someone wants to check out your code and run the project locally, provide instructions on how to do so.
+If someone wants to run the project locally, they can follow the below instructions:
 
 ```bash
 # Clone the repository
