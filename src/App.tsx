@@ -1,18 +1,15 @@
-import Navbar from "./components/Navbar/Navbar";
-import HomePage from "./pages/HomePage/HomePage";
-import About from "./pages/About/About";
-import Projects from "./pages/Projects/Projects";
-import Footer from "./components/Footer/Footer";
+import MainLayout from "./pages/MainLayout";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 const App = () => {
   return (
-    <>
-      <Navbar />
-      <HomePage />
-      <About />
-      <Projects />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<MainLayout />} />
+        <Route path="/about" element={<MainLayout />} />
+        <Route path="/projects" element={<MainLayout />} />
+      </Routes>
+    </Router>
   );
 };
 

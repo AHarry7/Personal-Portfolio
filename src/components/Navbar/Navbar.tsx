@@ -16,7 +16,10 @@ import NavLink from "./NavLink";
 import logow from "../../assets/logo-white.svg";
 import logob from "../../assets/logo-black.svg";
 
-const Links = ["Home", "About", "Projects"];
+const NavLinks = {
+  links: ["Home", "About", "Projects"],
+  path: ["/", "/about", "/projects"],
+};
 
 export default function Simple() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -62,8 +65,8 @@ export default function Simple() {
             fontSize={"large"}
             display={{ base: "none", md: "flex" }}
           >
-            {Links.map((link) => (
-              <NavLink key={link} to={link}>
+            {NavLinks.links.map((link, index) => (
+              <NavLink key={index} to={NavLinks.path[index]} target={link}>
                 {link}
               </NavLink>
             ))}
@@ -81,8 +84,8 @@ export default function Simple() {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              {Links.map((link) => (
-                <NavLink key={link} to={link}>
+              {NavLinks.links.map((link, index) => (
+                <NavLink key={index} to={NavLinks.path[index]} target={link}>
                   {link}
                 </NavLink>
               ))}
