@@ -4,11 +4,12 @@ import { Link } from "react-router-dom";
 interface Props {
   children: React.ReactNode;
   to: string;
+  target: string;
 }
 
-const NavLink = ({ children, to }: Props) => {
+const NavLink = ({ children, to, target }: Props) => {
   const handleClick = () => {
-    const element = document.getElementById(to);
+    const element = document.getElementById(target);
     if (element) {
       element.scrollIntoView({
         behavior: "smooth",
