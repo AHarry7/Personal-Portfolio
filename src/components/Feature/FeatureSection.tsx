@@ -10,6 +10,7 @@ interface Props {
   contentHeading: string;
   children: ReactNode;
   imgSrc: string;
+  githubLink: string;
 }
 
 const FeatureSection = ({
@@ -17,6 +18,7 @@ const FeatureSection = ({
   contentHeading,
   children,
   imgSrc,
+  githubLink,
 }: Props) => {
   return (
     <>
@@ -33,24 +35,21 @@ const FeatureSection = ({
       >
         <Flex
           minW={"100%"}
-          display={{ base: "block", sm: "flex", md: "flex", lg: "flex" }}
-          flexDirection={{ base: "column", lg: "row" }}
+          display={{ base: "block", sm: "flex" }}
+          flexDirection={{ base: "column", xl: "row" }}
           alignItems={"center"}
+          pt={{ base: 5, xl: 0 }}
           justifyContent={"space-between"}
         >
           <TitleCard imageSrc={imgSrc}>{cardTitle}</TitleCard>
 
-          <Box
-            pt={5}
-            textAlign={{ base: "center", lg: "start" }}
-            pr={{ lg: 5 }}
-          >
+          <Box pt={{ base: 5, lg: 10, xl: 5 }} textAlign={{ base: "center" }}>
             <FeatureContent heading={contentHeading} applyMargin={true}>
               {children}
             </FeatureContent>
 
             <IconLinkButton
-              href="https://github.com/AHarry7/MOB-Detection"
+              href={`https://github.com/AHarry7/${githubLink}`}
               color={"blue"}
               icon={<VscGithubInverted />}
             >

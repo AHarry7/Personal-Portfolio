@@ -29,13 +29,16 @@ export default function SplitWithImage() {
       maxW={"container.xl"}
       minHeight="100vh"
       alignItems="center"
+      display={"flex"}
       justifyContent="center"
+      alignContent={"center"}
       pt={{ base: 16, lg: 14 }}
       px={{ base: 7, md: 4 }}
     >
       <SimpleGrid
-        columns={{ base: 1, lg: 2 }}
-        spacing={{ base: 7, md: 10, lg: 60 }}
+        columns={{ base: 1, xl: 2 }}
+        spacing={{ base: 7, md: 10, xl: 60 }}
+        textAlign={{ lg: "center", xl: "start" }}
       >
         <Stack spacing={4}>
           <BadgeHeading heading="About Me" />

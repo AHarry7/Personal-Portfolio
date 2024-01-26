@@ -13,7 +13,6 @@ const Content = ({ heading, children, applyMargin }: Props) => {
       <Heading
         fontSize={{ base: "3xl", lg: "4xl", "2xl": "5xl" }}
         fontFamily="Gabarito-regular"
-        maxW={{ lg: "70rem" }}
         fontWeight={"bold"}
       >
         {heading}
@@ -22,9 +21,10 @@ const Content = ({ heading, children, applyMargin }: Props) => {
       <Text
         mt={applyMargin ? 7 : 0}
         color={"gray.500"}
-        textAlign={"justify"}
-        fontSize={{ base: "sm", md: "md", lg: "xl" }}
-        maxW={{ base: "max", lg: "30rem" }}
+        paddingInline={{ lg: 20, xl: 0 }}
+        textAlign={{ base: "justify" }}
+        fontSize={{ base: "sm", md: "md", lg: "lg" }}
+        maxW={{ base: "max", lg: "53rem", xl: "30rem" }}
       >
         {children}
       </Text>

@@ -12,7 +12,7 @@ const BadgeHeading = ({ heading }: Props) => {
       fontSize={"sm"}
       bg={useColorModeValue("blue.50", "blue.900")}
       p={2}
-      alignSelf={"flex-start"}
+      alignSelf={{ base: "flex-start", lg: "center", xl: "flex-start" }}
       rounded={"md"}
     >
       {heading}

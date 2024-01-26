@@ -13,7 +13,12 @@ const BadgeList = ({ heading, list }: Props) => {
         {heading}
       </Heading>
 
-      <Wrap direction="row" spacing={4}>
+      <Wrap
+        direction="row"
+        spacing={4}
+        justify={{ lg: "center", xl: "start" }}
+        paddingInline={{ lg: 20, xl: 0 }}
+      >
         {list.map((item) => (
           <Badge
             key={item}

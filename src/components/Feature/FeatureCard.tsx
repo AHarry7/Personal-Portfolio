@@ -15,8 +15,8 @@ const TitleCard = ({ children, imageSrc }: Props) => {
       align="center"
       variant="elevated"
       borderRadius={"2xl"}
-      maxW={{ base: "lg", lg: "420px", xl: "max" }}
-      maxHeight={{ lg: "md", xl: "sm", "2xl": "max" }}
+      maxW={{ base: "lg", xl: "max" }}
+      maxHeight={{ lg: "md", "2xl": "max" }}
     >
       <CardBody textAlign={"center"}>
         <Stack align={"center"} mb={2} maxW={"29rem"}>
@@ -30,7 +30,7 @@ const TitleCard = ({ children, imageSrc }: Props) => {
           borderRadius={"2xl"}
           maxW={{ xl: "sm", xxl: "xl" }}
           src={imageSrc}
-          width={{ xl: "478px" }}
+          width={{ xl: "450px" }}
           alt={imageSrc}
         />
       </CardBody>
