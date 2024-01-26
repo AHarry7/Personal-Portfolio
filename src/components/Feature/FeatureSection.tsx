@@ -1,6 +1,7 @@
 import IconLinkButton from "../Button/IconLinkButton";
 import { VscGithubInverted } from "react-icons/vsc";
-import { Flex, Box, Container } from "@chakra-ui/react";
+import { Flex, Box, Container, HStack } from "@chakra-ui/react";
+import { FaAngleUp } from "react-icons/fa";
 import TitleCard from "./FeatureCard";
 import FeatureContent from "./FeatureContent";
 import { ReactNode } from "react";
@@ -11,6 +12,7 @@ interface Props {
   children: ReactNode;
   imgSrc: string;
   githubLink: string;
+  demoLink: string;
 }
 
 const FeatureSection = ({
@@ -19,6 +21,7 @@ const FeatureSection = ({
   children,
   imgSrc,
   githubLink,
+  demoLink,
 }: Props) => {
   return (
     <>
@@ -48,13 +51,23 @@ const FeatureSection = ({
               {children}
             </FeatureContent>
 
-            <IconLinkButton
-              href={`https://github.com/AHarry7/${githubLink}`}
-              color={"blue"}
-              icon={<VscGithubInverted />}
-            >
-              Go to GitHub
-            </IconLinkButton>
+            <HStack spacing={5} justify={"center"}>
+              <IconLinkButton
+                href={`https://github.com/AHarry7/${githubLink}`}
+                color={"blue"}
+                icon={<VscGithubInverted />}
+              >
+                Go to GitHub
+              </IconLinkButton>
+
+              <IconLinkButton
+                href={demoLink}
+                color={"green"}
+                icon={<FaAngleUp />}
+              >
+                Live Demo
+              </IconLinkButton>
+            </HStack>
           </Box>
         </Flex>
       </Container>

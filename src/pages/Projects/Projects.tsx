@@ -11,6 +11,7 @@ const Projects = () => {
         contentHeading="Final Year Project"
         imgSrc={mob}
         githubLink="MOB-Detection"
+        demoLink="https://adeelharry.online"
       >
         The Man Overboard Detection System provides an automated and reliable
         solution for detecting a person overboard in water bodies. The project
@@ -26,6 +27,7 @@ const Projects = () => {
         contentHeading="Hobby Project"
         imgSrc={gameHub}
         githubLink="Game-Hub"
+        demoLink="https://game-hub-two-peach.vercel.app"
       >
         Game Hub is a captivating hobby project that mirrors the essence of
         rawg.io, presenting a lighter version. This platform revolves around
