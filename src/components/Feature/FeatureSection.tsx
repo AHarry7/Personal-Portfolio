@@ -12,7 +12,7 @@ interface Props {
   children: ReactNode;
   imgSrc: string;
   githubLink: string;
-  demoLink: string;
+  demoLink?: string | undefined;
 }
 
 const FeatureSection = ({
@@ -60,13 +60,15 @@ const FeatureSection = ({
                 Go to GitHub
               </IconLinkButton>
 
-              <IconLinkButton
-                href={demoLink}
-                color={"green"}
-                icon={<FaAngleUp />}
-              >
-                Live Demo
-              </IconLinkButton>
+              {demoLink && (
+                <IconLinkButton
+                  href={demoLink}
+                  color={"green"}
+                  icon={<FaAngleUp />}
+                >
+                  Live Demo
+                </IconLinkButton>
+              )}
             </HStack>
           </Box>
         </Flex>

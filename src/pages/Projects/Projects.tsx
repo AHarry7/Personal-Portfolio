@@ -11,7 +11,6 @@ const Projects = () => {
         contentHeading="Final Year Project"
         imgSrc={mob}
         githubLink="MOB-Detection"
-        demoLink="https://adeelharry.online"
       >
         The Man Overboard Detection System provides an automated and reliable
         solution for detecting a person overboard in water bodies. The project
