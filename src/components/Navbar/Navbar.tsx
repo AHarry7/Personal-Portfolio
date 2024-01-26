@@ -26,8 +26,9 @@ export default function Simple() {
     <>
       <Box
         bg={useColorModeValue("gray.100", "gray.900")}
-        px={3}
         zIndex={99}
+        top={0}
+        left={0}
         position={"fixed"}
         width={"100%"}
       >
