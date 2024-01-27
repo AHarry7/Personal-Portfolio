@@ -1,7 +1,8 @@
-import { Container, SimpleGrid, Stack } from "@chakra-ui/react";
+import { Box, Container, SimpleGrid, Stack } from "@chakra-ui/react";
 import BadgeList from "../../components/BadgeList/BadgeList";
 import FeatureContent from "../../components/Feature/FeatureContent";
 import BadgeHeading from "../../components/BadgeList/BadgeHeading";
+import { cardVariants, motion } from "../../components/animation/CardVariants";
 
 const list = [
   "Html",
@@ -41,23 +42,45 @@ export default function SplitWithImage() {
         textAlign={{ lg: "center", xl: "start" }}
       >
         <Stack spacing={4}>
-          <BadgeHeading heading="About Me" />
-
-          <FeatureContent
-            heading="Passionate React Frontend Developer"
-            applyMargin={false}
+          <motion.div
+            className="card-container"
+            initial="offscreen"
+            whileInView="onscreen"
+            transition={{ type: "spring" }}
+            viewport={{ once: true, amount: 0.8 }}
           >
-            I'm a skilled React developer with a passion for building elegant
-            and responsive user interfaces. With a solid understanding of
-            JavaScript and React, I specialize in creating efficient and
-            intuitive front-end solutions. My focus lies in developing clean,
-            reusable code and implementing modern design principles to deliver
-            seamless and engaging user experiences. I enjoy collaborating with
-            teams to bring innovative ideas to life.
-          </FeatureContent>
-        </Stack>
+            <motion.div variants={cardVariants}>
+              <Box w={"fit-content"}>
+                <BadgeHeading heading="About Me" />
+              </Box>
 
-        <BadgeList heading="Skills" list={list} />
+              <FeatureContent
+                heading="Passionate React Frontend Developer"
+                applyMargin={false}
+              >
+                I'm a skilled React developer with a passion for building
+                elegant and responsive user interfaces. With a solid
+                understanding of JavaScript and React, I specialize in creating
+                efficient and intuitive front-end solutions. My focus lies in
+                developing clean, reusable code and implementing modern design
+                principles to deliver seamless and engaging user experiences. I
+                enjoy collaborating with teams to bring innovative ideas to
+                life.
+              </FeatureContent>
+            </motion.div>
+          </motion.div>
+        </Stack>
+        <motion.div
+          className="card-container"
+          initial="offscreenp"
+          whileInView="onscreen"
+          transition={{ type: "spring" }}
+          viewport={{ once: true, amount: 0.8 }}
+        >
+          <motion.div variants={cardVariants}>
+            <BadgeList heading="Skills" list={list} />
+          </motion.div>
+        </motion.div>
       </SimpleGrid>
     </Container>
   );

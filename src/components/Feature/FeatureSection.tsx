@@ -5,6 +5,7 @@ import { FaAngleUp } from "react-icons/fa";
 import TitleCard from "./FeatureCard";
 import FeatureContent from "./FeatureContent";
 import { ReactNode } from "react";
+import { cardVariants, motion } from "../../components/animation/CardVariants";
 
 interface Props {
   cardTitle: string;
@@ -44,7 +45,20 @@ const FeatureSection = ({
           pt={{ base: 5, xl: 0 }}
           justifyContent={"space-between"}
         >
-          <TitleCard imageSrc={imgSrc}>{cardTitle}</TitleCard>
+          <Box>
+            <motion.div
+              className="card-container"
+              initial="offscreen"
+              whileInView="onscreen"
+              whileHover={{ scale: 1.1 }}
+              transition={{ type: "spring" }}
+              viewport={{ once: true, amount: 0.8 }}
+            >
+              <motion.div variants={cardVariants}>
+                <TitleCard imageSrc={imgSrc}>{cardTitle}</TitleCard>
+              </motion.div>
+            </motion.div>
+          </Box>
 
           <Box pt={{ base: 5, lg: 10, xl: 5 }} textAlign={{ base: "center" }}>
             <FeatureContent heading={contentHeading} applyMargin={true}>
@@ -57,7 +71,7 @@ const FeatureSection = ({
                 color={"blue"}
                 icon={<VscGithubInverted />}
               >
-                Go to GitHub
+                GitHub
               </IconLinkButton>
 
               {demoLink && (

@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import { Card, CardBody, Stack, Heading, Image } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 
 interface Props {
   imageSrc: string;

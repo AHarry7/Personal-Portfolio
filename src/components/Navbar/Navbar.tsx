@@ -34,7 +34,7 @@ export default function Simple() {
       >
         <Flex
           px={{ base: 2, md: 10 }}
-          h={16}
+          h={"70px"}
           alignItems={"center"}
           justifyContent={"space-between"}
         >
