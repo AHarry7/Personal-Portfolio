@@ -1,14 +1,15 @@
 import { Variants, motion } from "framer-motion";
 
 const cardVariants: Variants = {
-  offscreenp: { x: 300, rotate: -80, opacity: 0 },
+  offscreenp: { visibility: "hidden", rotate: 10, opacity: 0 },
   offscreen: {
-    x: -300,
-    rotate: -80,
+    visibility: "hidden",
+    rotate: 10,
     opacity: 0,
   },
   onscreen: {
     x: 0,
+    visibility: "visible",
     rotate: 0,
     opacity: 1,
     transition: {
